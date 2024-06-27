@@ -63,7 +63,7 @@ cd .. && \
 cd ./frontend && \
 mv ./.env.example ./.env && \
 npm install && \
-cd ..
+cd .. && \
 docker-compose up --build
 ```
 
