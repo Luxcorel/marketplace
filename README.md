@@ -50,20 +50,23 @@ This is a web app that allows users to buy and sell products through product lis
 ### Docker
 
 > [!NOTE]  
-> Make sure Docker is running before executing the following command:
+> Make sure Docker is running before executing the following:
 
-Download, build, and run:
+Download, build, and run in one command:
 ```bash
 git clone --recurse-submodules https://github.com/luxcorel/marketplace && \
 cd ./marketplace && \
 cd ./backend && \
-mv ./.env.example ./.env && \
 ./gradlew build -x test && \
 cd .. && \
 cd ./frontend && \
-mv ./.env.example ./.env && \
 npm install && \
 cd .. && \
+docker-compose up --build
+```
+
+Run modules if they are downloaded already:
+```bash
 docker-compose up --build
 ```
 
