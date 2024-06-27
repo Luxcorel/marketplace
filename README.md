@@ -44,10 +44,10 @@ This is a web app that allows users to buy and sell products through product lis
 * [Git](https://git-scm.com) version >= 2.13
 * Java JDK version >= 21
 * [Node.js](https://nodejs.org) version >= 20
-* A PostgreSQL DB instance set up with the provided ```schema.sql```
+* A PostgreSQL DB instance set up with the provided scripts in the ```db-init/``` directory
 * (Optional) [Docker](https://www.docker.com/) for running backend tests
 
-### Docker
+### Setup using Docker
 
 > [!NOTE]  
 > Make sure Docker is running before executing the following:
@@ -70,7 +70,7 @@ Run modules if they are downloaded already:
 docker-compose up --build
 ```
 
-### Linux/macOS
+### Setup using Linux/macOS
 Download & build:
 ```bash
 git clone --recurse-submodules https://github.com/luxcorel/marketplace && \
@@ -97,7 +97,7 @@ If everything was successful:
 * Frontend server @ http://localhost:3000
 * Backend server @ http://localhost:8080
 
-### Windows (Untested)
+### Setup using Windows (Untested)
 Download & build:
 ```powershell
 Invoke-Command -ScriptBlock {
