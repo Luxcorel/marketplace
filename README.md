@@ -126,12 +126,12 @@ If everything was successful:
   <table>
     <tr>
       <td>
-        <img alt="Profile page" src="https://github.com/Luxcorel/marketplace/assets/98045373/2ee0e98f-cdf1-4c88-9bd2-4583bd7b21b4">
+        <img alt="Watchlist page" src="https://github.com/Luxcorel/marketplace/assets/98045373/7292f95d-087c-4461-a76a-34ebb58b3c36">
       </td>
     </tr>
     <tr>
       <td>
-        <p>Profile page</p>
+        <p>Watchlist page - subscribe to new posts in chosen categories</p>
       </td>
     </tr>
   </table>
@@ -141,12 +141,12 @@ If everything was successful:
   <table>
     <tr>
       <td>
-        <img alt="Watchlist page" src="https://github.com/Luxcorel/marketplace/assets/98045373/7292f95d-087c-4461-a76a-34ebb58b3c36">
+        <img alt="Profile page" src="https://github.com/Luxcorel/marketplace/assets/98045373/2ee0e98f-cdf1-4c88-9bd2-4583bd7b21b4">
       </td>
     </tr>
     <tr>
       <td>
-        <p>Watchlist page - subscribe to new posts in chosen categories</p>
+        <p>Profile page</p>
       </td>
     </tr>
   </table>
