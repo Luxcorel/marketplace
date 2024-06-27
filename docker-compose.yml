@@ -12,6 +12,7 @@ services:
       IMAGE_UPLOAD_DIRECTORY: /images
       IMAGE_HOST_URL: http://host.docker.internal:8080
       SPRING_PROFILES_ACTIVE: production
+      MAX_UPLOAD_SIZE_BYTES: 10000000
     depends_on:
       - postgres
 
