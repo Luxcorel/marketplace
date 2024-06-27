@@ -47,6 +47,26 @@ This is a web app that allows users to buy and sell products through product lis
 * A PostgreSQL DB instance set up with the provided ```schema.sql```
 * (Optional) [Docker](https://www.docker.com/) for running backend tests
 
+### Docker
+
+> [!NOTE]  
+> Make sure Docker is running before executing the following command:
+
+Download, build, and run:
+```bash
+git clone --recurse-submodules https://github.com/luxcorel/marketplace && \
+cd ./marketplace && \
+cd ./backend && \
+mv ./.env.example ./.env && \
+./gradlew build -x test && \
+cd .. && \
+cd ./frontend && \
+mv ./.env.example ./.env && \
+npm install && \
+cd ..
+docker-compose up --build
+```
+
 ### Linux/macOS
 Download & build:
 ```bash
