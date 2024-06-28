@@ -39,18 +39,26 @@ This is a web app that allows users to buy and sell products through product lis
 
 ## Setup
 
+* [Prerequisites](#prerequisites)
+* [Setup using Docker](#setup-using-docker)
+* [Setup using Linux/macOS](#setup-using-linuxmacos)
+* [Setup using Windows (Untested)](#setup-using-windows-untested)
+
 ### Prerequisites
 
 * [Git](https://git-scm.com) version >= 2.13
 * Java JDK version >= 21
 * [Node.js](https://nodejs.org) version >= 20
 * A PostgreSQL DB instance set up with the provided scripts in the ```db-init/``` directory
-* (Optional) [Docker](https://www.docker.com/) for running backend tests
+* (Optional) [Docker](https://www.docker.com/) for running backend tests or using the Docker setup
 
 ### Setup using Docker
 
-> [!NOTE]  
-> Make sure Docker is running before executing the following:
+> [!NOTE]
+> This setup requires Docker to be installed.
+> Make sure Docker is running before executing any of the following commands. 
+
+Dockerfiles are provided in the backend and frontend modules, which can be run individually if desired. The following setup will use docker-compose to instantiate the frontend, the backend, and a PostgreSQL database. These instances are configured using the ```docker-compse.yml``` file, which can be customized if wanted. 
 
 Download, build, and run in one command:
 ```bash
@@ -59,16 +67,17 @@ cd ./marketplace && \
 cd ./backend && \
 ./gradlew build -x test && \
 cd .. && \
-cd ./frontend && \
-npm install && \
-cd .. && \
 docker-compose up --build
 ```
 
-Run modules if they are downloaded already:
+Run already downloaded and built modules:
 ```bash
 docker-compose up --build
 ```
+
+If everything was successful:
+* Frontend server @ http://localhost:3000
+* Backend server @ http://localhost:8080
 
 ### Setup using Linux/macOS
 Download & build:
