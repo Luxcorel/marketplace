@@ -106,7 +106,7 @@ If everything was successful:
 * Frontend server @ http://localhost:3000
 * Backend server @ http://localhost:8080
 
-### Setup using Windows (Untested)
+### Setup using Windows (Powershell)
 Download & build:
 ```powershell
 Invoke-Command -ScriptBlock {
