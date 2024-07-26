@@ -42,7 +42,7 @@ This is a web app that allows users to buy and sell products through product lis
 * [Prerequisites](#prerequisites)
 * [Setup using Docker](#setup-using-docker)
 * [Setup using Linux/macOS](#setup-using-linuxmacos)
-* [Setup using Windows (Untested)](#setup-using-windows-untested)
+* [Setup using Windows (Powershell)](#setup-using-windows-powershell)
 
 ### Prerequisites
 
