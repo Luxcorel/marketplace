@@ -61,18 +61,41 @@ This is a web app that allows users to buy and sell products through product lis
 Dockerfiles are provided in the backend and frontend modules, which can be run individually if desired. The following setup will use docker-compose to instantiate the frontend, the backend, and a PostgreSQL database. These instances are configured using the ```docker-compse.yml``` file, which can be customized if wanted. 
 
 Download, build, and run in one command:
-```bash
-git clone --recurse-submodules https://github.com/luxcorel/marketplace && \
-cd ./marketplace && \
-cd ./backend && \
-./gradlew build -x test && \
-cd .. && \
-docker-compose up --build
+
+<details>
+  <summary>Linux/macOS</summary>
+  
+  ```bash
+  git clone --recurse-submodules https://github.com/luxcorel/marketplace && \
+  cd ./marketplace && \
+  cd ./backend && \
+  ./gradlew build -x test && \
+  cd .. && \
+  docker compose up --build
+  ```
+
+</details>
+
+<details>
+  <summary>Windows (Powershell)</summary>
+  
+```powershell
+Invoke-Command -ScriptBlock {
+  $ErrorActionPreference="Stop";
+  git clone --recurse-submodules https://github.com/luxcorel/marketplace ; `
+  cd ./marketplace ; `
+  cd ./backend ; `
+  ./gradlew build -x test ; `
+  cd .. ; `
+  docker compose up --build
+}
 ```
+
+</details>
 
 Run already downloaded and built modules:
 ```bash
-docker-compose up --build
+docker compose up --build
 ```
 
 If everything was successful:
@@ -110,17 +133,17 @@ If everything was successful:
 Download & build:
 ```powershell
 Invoke-Command -ScriptBlock {
-$ErrorActionPreference="Stop";
-git clone --recurse-submodules https://github.com/luxcorel/marketplace ; `
-cd .\marketplace ; `
-cd .\backend ; `
-ren .\.env.example .\.env ; `
-.\gradlew build -x test ; `
-cd .. ; `
-cd .\frontend ; `
-ren .\.env.example .\.env ; `
-npm install ; `
-cd ..
+  $ErrorActionPreference="Stop";
+  git clone --recurse-submodules https://github.com/luxcorel/marketplace ; `
+  cd .\marketplace ; `
+  cd .\backend ; `
+  ren .\.env.example .\.env ; `
+  .\gradlew build -x test ; `
+  cd .. ; `
+  cd .\frontend ; `
+  ren .\.env.example .\.env ; `
+  npm install ; `
+  cd ..
 }
 ```
 
