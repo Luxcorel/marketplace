@@ -81,13 +81,13 @@ Download, build, and run in one command:
   
 ```powershell
 Invoke-Command -ScriptBlock {
-  $ErrorActionPreference="Stop";
-  git clone --recurse-submodules https://github.com/luxcorel/marketplace ; `
-  cd ./marketplace ; `
-  cd ./backend ; `
-  ./gradlew build -x test ; `
-  cd .. ; `
-  docker compose up --build
+$ErrorActionPreference="Stop";
+git clone --recurse-submodules https://github.com/luxcorel/marketplace ; `
+cd ./marketplace ; `
+cd ./backend ; `
+./gradlew build -x test ; `
+cd .. ; `
+docker compose up --build
 }
 ```
 
@@ -133,17 +133,17 @@ If everything was successful:
 Download & build:
 ```powershell
 Invoke-Command -ScriptBlock {
-  $ErrorActionPreference="Stop";
-  git clone --recurse-submodules https://github.com/luxcorel/marketplace ; `
-  cd .\marketplace ; `
-  cd .\backend ; `
-  ren .\.env.example .\.env ; `
-  .\gradlew build -x test ; `
-  cd .. ; `
-  cd .\frontend ; `
-  ren .\.env.example .\.env ; `
-  npm install ; `
-  cd ..
+$ErrorActionPreference="Stop";
+git clone --recurse-submodules https://github.com/luxcorel/marketplace ; `
+cd .\marketplace ; `
+cd .\backend ; `
+ren .\.env.example .\.env ; `
+.\gradlew build -x test ; `
+cd .. ; `
+cd .\frontend ; `
+ren .\.env.example .\.env ; `
+npm install ; `
+cd ..
 }
 ```
 
