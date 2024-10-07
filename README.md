@@ -58,7 +58,7 @@ This is a web app that allows users to buy and sell products through product lis
 > This setup requires Docker to be installed.
 > Make sure Docker is running before executing any of the following commands. 
 
-Dockerfiles are provided in the backend and frontend modules, which can be run individually if desired. The following setup will use docker-compose to instantiate the frontend, the backend, and a PostgreSQL database. These instances are configured using the ```docker-compse.yml``` file, which can be customized if wanted. 
+Dockerfiles are provided in the backend and frontend modules, which can be run individually if desired. The following setup will use docker-compose to instantiate the frontend, the backend, and a PostgreSQL database. These instances are configured using the ```docker-compose.yml``` file, which can be customized. 
 
 Download, build, and run in one command:
 
