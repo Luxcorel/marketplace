@@ -152,15 +152,15 @@ After the command above finishes, required environment variables need to be set:
 * Run ```cd backend && ./gradlew bootRun``` to start the backend server.
 * Run ```cd frontend && npm run dev``` to start the frontend server.
 
+If everything was successful:
+* Frontend server @ http://localhost:3000
+* Backend server @ http://localhost:8080
+
 #### Run backend tests (optional)
 > [!NOTE]
 > Docker must be installed and running for unit tests to be run. 
 
 * Run: ```cd backend``` and then  ```./gradlew test``` to run the backend tests.
-
-If everything was successful:
-* Frontend server @ http://localhost:3000
-* Backend server @ http://localhost:8080
 
 ### Setup using Windows (Powershell)
 Download & build:
