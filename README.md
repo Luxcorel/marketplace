@@ -37,6 +37,33 @@ This is a web app that allows users to buy and sell products through product lis
 * Purchase history
 * UI for desktop & mobile
 
+### Technologies used
+
+#### Backend
+
+| Name                                                  | Description                                 |
+|-------------------------------------------------------|---------------------------------------------|
+| [Spring Boot](https://spring.io/projects/spring-boot) | Java framework                              |
+| [Test Containers](https://testcontainers.com/)        | Unit testing using Docker containers        |
+| [Github Actions](https://docs.github.com/en/actions)  | CI: running unit tests and building project |
+
+#### Frontend
+
+| Name                                                  | Description                                        |
+|-------------------------------------------------------|----------------------------------------------------|
+| [Next.js](https://nextjs.org/)                        | Full-stack JavaScript framework                    |
+| [Shadcn UI](https://github.com/shadcn-ui/ui)          | UI component library                               |
+| [SWR](https://swr.vercel.app/)                        | Client-side data fetching library                  |
+| [Tailwind](https://tailwindcss.com/)                  | CSS styling library                                |
+| [Github Actions](https://docs.github.com/en/actions)  | CI: linting, format checking, and building project |
+
+#### Hosting of this project
+
+| Name                                                  | Description                                 |
+|-------------------------------------------------------|---------------------------------------------|
+| [Vercel](https://vercel.com/)                         | Frontend hosting                            |
+| [Railway](https://railway.com/)                       | Backend and database hosting                |
+
 ## Setup
 
 * [Prerequisites](#prerequisites)
@@ -50,7 +77,7 @@ This is a web app that allows users to buy and sell products through product lis
 * Java JDK version >= 21
 * [Node.js](https://nodejs.org) version >= 20
 * A PostgreSQL DB instance set up with the provided scripts in the ```db-init/``` directory
-* (Optional) [Docker](https://www.docker.com/) for running backend tests or using the Docker setup
+* (Optional) [Docker](https://www.docker.com/) for running backend unit tests or using the Docker setup
 
 ### Setup using Docker
 
@@ -85,7 +112,7 @@ $ErrorActionPreference="Stop";
 git clone --recurse-submodules https://github.com/luxcorel/marketplace ; `
 cd ./marketplace ; `
 cd ./backend ; `
-./gradlew build -x test ; `
+./gradlew.bat build -x test ; `
 cd .. ; `
 docker compose up --build
 }
@@ -121,9 +148,15 @@ After the command above finishes, required environment variables need to be set:
 * Open ```backend/.env``` with a text editor and follow the instructions in the file.
 * Open ```frontend/.env``` with a text editor and follow the instructions in the file. 
 
-Lastly, to run the project:
+#### Running the project
 * Run ```cd backend && ./gradlew bootRun``` to start the backend server.
 * Run ```cd frontend && npm run dev``` to start the frontend server.
+
+#### Run backend tests (optional)
+> [!NOTE]
+> Docker must be installed and running for unit tests to be run. 
+
+* Run: ```cd backend``` and then  ```./gradlew test``` to run the backend tests.
 
 If everything was successful:
 * Frontend server @ http://localhost:3000
@@ -151,13 +184,19 @@ After the command above finishes, required environment variables need to be set:
 * Open ```backend\.env``` with a text editor and follow the instructions in the file.
 * Open ```frontend\.env``` with a text editor and follow the instructions in the file. 
 
-Lastly, to run the project: 
+#### Running the project
 * Run: ```cd backend``` and then  ```gradlew.bat bootRun``` to start the backend server.
 * Run: ```cd frontend``` and then ```npm run dev``` to start the frontend server.
 
 If everything was successful:
 * Frontend server @ http://localhost:3000
 * Backend server @ http://localhost:8080
+
+#### Run backend tests (optional)
+> [!NOTE]
+> Docker must be installed and running for unit tests to be run. 
+
+* Run: ```cd backend``` and then  ```gradlew.bat test``` to run the backend tests.
 
 ## Screenshots
 
