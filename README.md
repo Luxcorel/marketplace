@@ -3,7 +3,8 @@
 <p align="center">
   <a href="#overview">Overview</a> •
   <a href="#setup">Setup</a> •
-  <a href="#screenshots">Screenshots</a>
+  <a href="#screenshots">Screenshots</a> •
+  <a href="#future-improvements">Future improvements</a>
 </p>
 
 <div align="center">
@@ -245,3 +246,13 @@ If everything was successful:
     </tr>
   </table>
 </div>
+
+## Future improvements
+
+- CSRF protection using the CSRF synchronizer pattern
+- Rate limiting
+- Captcha for the signup endpoint
+- Open graph metadata and other SEO related features
+- Image hosting on a CDN
+- Pagination on search page
+- Chat feature between buyers and sellers
