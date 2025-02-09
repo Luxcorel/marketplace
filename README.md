@@ -249,7 +249,6 @@ If everything was successful:
 
 ## Future improvements
 
-- CSRF protection using the CSRF synchronizer pattern
 - Rate limiting
 - Captcha for the signup endpoint
 - Open graph metadata and other SEO related features
